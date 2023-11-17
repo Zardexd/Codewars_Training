@@ -12,14 +12,14 @@ package kata_55cbd4ba903825f7970000f5;
 
 public class GrassHopper {
     public static char getGrade(int s1, int s2, int s3) {
-    int avg = ((s1 + s2 + s3) /3 )/10;
+    int avg = ((s1 + s2 + s3) /30);
 
-    switch (avg) {
-    case 6: return 'D';
-    case 7: return 'C';
-    case 8: return 'B';
-    case 9, 10: return 'A';
-    }
-    return 'F';
+        return switch (avg) {
+            case 6 -> 'D';
+            case 7 -> 'C';
+            case 8 -> 'B';
+            case 9, 10 -> 'A';
+            default -> 'F';
+        };
     }
 }
