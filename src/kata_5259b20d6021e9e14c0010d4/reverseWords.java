@@ -9,20 +9,20 @@ package kata_5259b20d6021e9e14c0010d4;
 
 public class reverseWords {
     public static String reverseWords(final String original) {
-        if (original.trim().length() > 0){
+        if (!original.trim().isEmpty()){
             String[] parts = original.split(" ");
-            String result = "";
+            StringBuilder result = new StringBuilder();
 
             for (String x : parts) {
-                String nw = "";
+                StringBuilder nw = new StringBuilder();
                 for (int i = 0; i < x.length(); i++) {
                     char ch = x.charAt(i);
-                    nw = ch + nw;
+                    nw.insert(0, ch);
                 }
-                result += nw + " ";
+                result.append(nw).append(" ");
             }
-            System.out.println(result.trim());
-            return result.trim();
+            System.out.println(result.toString().trim());
+            return result.toString().trim();
         }
         return original;
     }
