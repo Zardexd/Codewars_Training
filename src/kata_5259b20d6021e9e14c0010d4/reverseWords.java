@@ -14,12 +14,12 @@ public class reverseWords {
             StringBuilder result = new StringBuilder();
 
             for (String x : parts) {
-                StringBuilder nw = new StringBuilder();
+                StringBuilder newline = new StringBuilder();
                 for (int i = 0; i < x.length(); i++) {
                     char ch = x.charAt(i);
-                    nw.insert(0, ch);
+                    newline.insert(0, ch);
                 }
-                result.append(nw).append(" ");
+                result.append(newline).append(" ");
             }
             System.out.println(result.toString().trim());
             return result.toString().trim();
